@@ -75,11 +75,6 @@ module.exports = {
         }
       },
       {
-        test: /\.(sass|scss)$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
-        options: { includePaths: [path.resolve(__dirname, './node_modules')] },
-      },
-      {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
         loader: 'url-loader',
         options: {

@@ -23,7 +23,7 @@ export default {
   color: #2c3e50;
 
   /*@media(min-width: 768px) {*/
-    margin-top: 60px;
+    margin-top: 40px;
   /*}*/
   min-width: 1080px;
 }
