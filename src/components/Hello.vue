@@ -11,7 +11,8 @@
           <dd v-if="qq"><i class="fa fa-qq"></i> {{ qq }}</dd>
           <dd v-if="wechat"><i class="fa fa-wechat"></i> {{ wechat }}</dd>
           <dd v-if="site"><i class="fa fa-home"></i> <a :href="site" target="_blank" >{{ site }}</a></dd>
-          <dd v-if="github"><i class="fa fa-github"></i> <a :href="github">{{ github }}</a></dd>
+          <dd v-if="github"><i class="fa fa-github"></i> <a :href="github" target="_blank">{{ github }}</a></dd>
+          <dd><svg></svg></dd>
         </div>
         <div class="contact">
           <dt>Job. 应聘岗位</dt>
@@ -19,7 +20,7 @@
         </div>
         <div class="contact">
           <dt>Description. 自我介绍</dt>
-          <p>我是一个可能有着重度代码强迫症的 Web 攻城狮，生活在二次元与三次元的之间。喜欢钻研技术，有着自己的职业规划</p>
+          <p class="self-description">我是一个可能有着重度代码强迫症的 Web 攻城狮，生活在二次元与三次元的之间。喜欢钻研技术，有着自己的职业规划</p>
         </div>
       </div>
     </div>
@@ -39,15 +40,13 @@
         </div>
         <div class="contact">
           <dt>Skill. 专业技能</dt>
-          <dd>了解 Linux 系统的常用命令，能够做比较简单的运维。</dd>
+          <dd v-for="skill in skills">{{ skill }}</dd>
         </div>
         <div class="contact">
           <dt>Project. 项目经历</dt>
-          <dd>
-            <h3>游戏网站主页及后台（2015 年 12 月 ~ 2016 年 1 月）</h3>
-            <h3>投放后台（2016 年 3 月 ~ 2016 年 4 月）</h3>
-            <h3>SDK 数据报表（2016 年 7 月至今）</h3>
-            <h3>若干微信活动（2016 年 7 月至今）</h3>
+          <dd v-for="project in project">
+            <h3>{{ project.name }}</h3>
+            <p class="project-description">{{ project.description }}</p>
           </dd>
         </div>
       </div>
@@ -76,6 +75,33 @@ export default {
       experiences: [
         '杭州安恒信息技术有限公司（2015.8 ~ 2015.12）',
         '杭州边锋网络技术有限公司（2015.12 至今）'
+      ],
+      skills: [
+        '了解 Linux 系统的常用命令，能够做比较简单的运维、代码部署、环境搭建。',
+        '熟悉 PHP 语言，熟悉 CodeIgniter、Laravel 等框架，初步了解 Swoole 网络库，了解 PSR 的各项规范，对代码有洁癖，希望能够写出优雅的代码。',
+        '了解计算机网络的相关知识，了解 HTTP 协议的相关知识，了解 TCP/IP 协议族相关知识，正在学习网络编程。',
+        '了解前端相关知识，使用过 vuejs 框架',
+        '熟悉 git 相关命令，并对 git flow 有研究并付诸实践。',
+        '了解 Restful API，并参与部门项目前后端分离项目的 API 设计与开发。',
+        '了解常见的网络安全知识，有网络安全方面的实践。'
+      ],
+      project: [
+        {
+          name: '对 SDK 服务稳定性与性能提升改造（2017.6 ~ 2017.9）',
+          description: 'dddddd'
+        },
+        {
+          name: '游戏网站主页及后台（2015.12 ~ 2016.1）'
+        },
+        {
+          name: '投放后台（2016.3 ~ 2016.4）'
+        },
+        {
+          name: 'SDK 数据报表（2016.7 至今）'
+        },
+        {
+          name: '若干微信活动（2016.7 至今）'
+        }
       ]
     }
   }
@@ -120,15 +146,17 @@ export default {
     /*width: 670px;*/
     position: relative;
     /*float: left;*/
-    background: linear-gradient(160deg, #3FD1E1 0%, #44D7CD 100%);
-    /*background: linear-gradient(160deg, #3369E7 0%, #00AEFF 100%);*/
+    /*background: linear-gradient(160deg, #3FD1E1 0%, #44D7CD 100%);*/
+    /*background: linear-gradient(160deg, #00AEFF 0%, #3369E7 100%);*/
     /*background: linear-gradient(160deg, #e43a15 0%, #e65245 100%);*/
+    background: #fff;
     box-shadow:
-      rgba(63, 209, 225, 0.35) -2px -2px 20px,
-      rgba(63, 209, 225, 0.35) 5px 5px 30px;
+      /**rgba(63, 209, 225, 0.35) -2px -2px 20px,
+      rgba(63, 209, 225, 0.35) 5px 5px 30px;*/
+      0 4px 30px 0 rgba(223,225,230,0.5);
     border-radius: 5px;
-    padding: 10px;
-    color: #fff;
+    padding: 10px 10px 10px 0;
+    color: rgb(71, 81, 90);
   }
 
   .avatar {
@@ -140,27 +168,38 @@ export default {
 
   .contact {
     margin-top: 20px;
-    margin-left: 10px;
+    /*margin-left: 10px;*/
     text-align: left;
+  }
+
+  .contact a {
+    color: #08a4e8;
   }
 
   .contact dt {
     font-size: 25px;
     font-weight: 300;
-    border-left: solid 2px #fff;
+    border-left: solid 3px #2da8cd;
+    /*box-shadow: 1px 0 12px 0 #6190E8;*/
     padding-left: 15px;
     margin-top: 10px;
+    /*<!--margin-left: -2px;-->*/
   }
 
   .contact dd {
     font-size: 16px;
-    font-weight: 300;
-    -webkit-margin-start: 10px;
-    margin-top: 10px;
+    font-weight: 400;
+    -webkit-margin-start: 17px;
+    margin-top: 20px;
   }
 
-  .contact p {
+  .self-description {
     text-indent: 2em;
+    margin-left: 10px;
+  }
+
+  .project-description {
+    margin-left: 10px;
   }
 
   dd i {

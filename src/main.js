@@ -3,6 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import VueFeatherIcon from 'vue-feather-icon'
+
+Vue.use(VueFeatherIcon)
 
 Vue.config.productionTip = false
 

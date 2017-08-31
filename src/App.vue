@@ -14,6 +14,7 @@ export default {
   /*@import 'assets/FiraCode-Regular.otf';*/
   html, body {
     width: 1280px;
+    background: rgb(248, 250, 255);
   }
 #app {
   font-family: "Fira Code", cursive， Helvetica, Arial, sans-serif;
