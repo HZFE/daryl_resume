@@ -16,6 +16,7 @@
   "dependencies": {
     "feather-icons": "^3.2.2",
     "font-awesome": "^4.7.0",
+    "js-yaml": "^3.9.1",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
     "node-sass": "^4.5.3",
