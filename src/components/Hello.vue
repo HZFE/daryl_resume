@@ -57,7 +57,11 @@
           <dt>Project. 项目经历</dt>
           <dd v-for="project in projects" class="project">
             <div>
-              <div class="circle"></div><h3>{{ project.name }}</h3>
+              <div class="circle"></div>
+              <h3>
+                <span>{{ project.name }}</span>
+                <a v-if="project.src" class="project-src" :href="project.src"><i class="fa fa-link"></i>源代码</a>
+              </h3>
               <p class="project-description">{{ project.description }}</p>
             </div>
           </dd>
@@ -135,12 +139,18 @@ export default {
       ],
       projects: [
         {
-          name: '对 SDK 服务稳定性与性能提升改造',
-          description: '在工作之余，分析部门的 SDK 服务，发现了性能可以改进的方向。使用了有赞开源的 zan 框架，对代码进行改造。通过堆栈式协程，将原本同步阻塞的 API 调用，改写为异步非阻塞的 API 调用，极大地提升了程序的性能。自测结果单机由 150QPS 增至 2000QPS。'
+          name: '基于 Swoole 的 PHP 框架（个人项目）',
+          description: '业余的个人项目，编写的基于 Swoole 的 PHP 框架的开发。因为 zan 是依赖 zan 扩展的，起初的目的是和 zan 一样使用 yield 实现一套异步非阻塞的框架，基于 Swoole 的，用在前面的项目改进上。现在依然还在开发中，模仿了 Laravel 的部分实现。',
+          src: 'https://github.com/Daryl-L/Tetsuwan'
         },
         {
-          name: '基于 Swoole 的 PHP 框架',
-          description: '业余的个人项目，编写的基于 Swoole 的 PHP 框架的开发。因为 zan 是依赖 zan 扩展的，起初的目的是和 zan 一样使用 yield 实现一套异步非阻塞的框架，基于 Swoole 的，用在前面的项目改进上。现在依然还在开发中，模仿了 Laravel 的部分实现。'
+          name: 'Resume（个人项目）',
+          description: '使用 vue.js 开发的简历模板，还算不丑的界面，可以通过 json 文件生成简历的内容。',
+          src: 'https://github.com/HZFE/daryl_resume'
+        },
+        {
+          name: '对 SDK 服务稳定性与性能提升改造',
+          description: '在工作之余，分析部门的 SDK 服务，发现了性能可以改进的方向。使用了有赞开源的 zan 框架，对代码进行改造。通过堆栈式协程，将原本同步阻塞的 API 调用，改写为异步非阻塞的 API 调用，极大地提升了程序的性能。自测结果单机由 150QPS 增至 2000QPS。'
         },
         {
           name: '游戏官网及后台',
@@ -156,7 +166,7 @@ export default {
         },
         {
           name: 'SDK 开发者后台',
-          description: '为开发者接入 SDK 的配置后台。使用前后端分离的方式开发，我负责部分模块，参与设计 API 的结构。对负责的模块的代码编写单元测试，并且对团队成员负责的模块进行单元测试的编写。'
+          description: '为开发者接入 SDK 的配置后台。使用前后端分离的方式开发，我负责部分模块，参与设计 API 的结构。根据公司统一认证的流程，进行一些修改，独自设计了整个登录的流程，以适应前后端分离的结构。对负责的模块的代码编写单元测试，并且对团队成员负责的模块进行单元测试的编写。'
         }
       ]
     }
@@ -285,5 +295,15 @@ export default {
     height: 14px;
     background-color: #97ABFF;
     border-radius: 15px;
+  }
+
+  .project-src {
+    position: relative;
+    border: 1px solid #08a4e8;
+    border-radius: 5px;
+    font-size: 14px;
+    padding: 1px 5px;
+    text-decoration: none;
+    margin-bottom: 2px;
   }
 </style>
