@@ -1,6 +1,10 @@
 <template>
   <div id="app">
     <router-view></router-view>
+
+    <footer>
+      <p>Theme by <a href="https://github.com/HZFE/daryl_resume">Daryl</a>. Made with ❤️ by Daryl. Thanks to HZFE.</p>
+    </footer>
   </div>
 </template>
 
@@ -12,9 +16,15 @@ export default {
 
 <style type="less">
   /*@import 'assets/FiraCode-Regular.otf';*/
+  @font-face {
+    font-family: "Fira Code";
+    src: url('assets/FiraCode-Regular.otf');
+  }
+
   html, body {
-    width: 1280px;
+    /*width: 12ZZ80px;*/
     background: rgb(248, 250, 255);
+    margin: 0;
   }
 #app {
   font-family: "Fira Code", cursive， Helvetica, Arial, sans-serif;
@@ -22,10 +32,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-
-  /*@media(min-width: 768px) {*/
-    margin-top: 40px;
-  /*}*/
-  min-width: 1080px;
+  margin-top: 40px;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 1280px;
 }
+
+@page {
+  size: 10in;
+}
+
+  a {
+    color: #08a4e8 ;
+  }
 </style>
