@@ -64,7 +64,8 @@
               <div class="circle"></div>
               <h3>
                 <span>{{ project.name }}</span>
-                <a v-if="project.src" class="project-src" :href="project.src"><i class="fa fa-link"></i>源代码</a>
+                <a v-if="project.src" class="project-src" :href="project.src" target="_blank"><i class="fa fa-link"></i>源代码</a>
+                <a v-if="project.demo" :href="project.demo" class="project-src" target="_blank"><i class="fa fa-link"></i>Demo</a>
               </h3>
               <p class="project-description">{{ project.description }}</p>
             </div>
@@ -152,7 +153,8 @@ export default {
         {
           name: 'Resume（个人项目）',
           description: '使用 vue.js 开发的简历模板，还算不丑的界面，可以通过 json 文件生成简历的内容。',
-          src: 'https://github.com/HZFE/daryl_resume'
+          src: 'https://github.com/HZFE/daryl_resume',
+          demo: 'https://resume.daryl.moe'
         },
         {
           name: '对 SDK 服务稳定性与性能提升改造',
