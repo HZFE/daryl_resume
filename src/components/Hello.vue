@@ -96,7 +96,7 @@ export default {
       hobby: '围棋、网球、滑雪、动漫',
       school: '杭州电子科技大学',
       diploma: '工学学士',
-      major: '信息安全（保密技术）',
+      major: '信息安全',
       guaduation: '2016 年 6 月',
       experiences: [
         '杭州安恒信息技术有限公司（2015.8 ~ 2015.12）',
