@@ -3,7 +3,7 @@
     <router-view></router-view>
 
     <footer>
-      <p>Theme by <a href="https://github.com/HZFE/daryl_resume">Daryl</a>. Made with ❤️ by Daryl. Thanks to HZFE.</p>
+      <p>Theme by <a href="https://github.com/HZFE/daryl_resume">Daryl</a>. Made with ❤️ by <a href="https://is.daryl.moe">Daryl</a>. Thanks to <a href="https://hzfe.org">HZFE</a>.</p>
     </footer>
   </div>
 </template>

@@ -1,0 +1,90 @@
+{
+  "avatar": "https://o90cnn3g2.qnssl.com/WechatIMG19.jpeg",
+  "name": "梁翰雷",
+  "phoneNumber": "15958154647",
+  "email": "daryl.moe@outlook.com",
+  "qq": "286065910",
+  "wechat": "Daryl-L",
+  "job": "PHP 开发工程师",
+  "site": "https://is.daryl.moe",
+  "github": "https://github.com/Daryl-L",
+  "segmentfault": "http://segmentfault.com/u/daryl",
+  "description": "我是一个可能有着重度代码强迫症的 Web 攻城狮，生活在二次元与三次元的之间。喜欢钻研技术，有自己的职业规划，对系统底层感兴趣，正努力完善基础知识。",
+  "hobby": "围棋、网球、滑雪、动漫",
+  "school": "杭州电子科技大学",
+  "education": "大学本科",
+  "degree": "理学学士",
+  "major": "信息安全",
+  "guaduation": "2016 年 6 月",
+  "experiences": [
+    "杭州边锋网络技术有限公司（2016.6 至今）"
+  ],
+  "skills": [
+    {
+      "title": "PHP",
+      "items": [
+        "熟悉 PHP 语法，了解 PSR 各项规范。",
+        "熟悉 CodeIgniter、Laravel 的框架，对 Laravel 的源码有一些研究。",
+        "了解 Swoole 及其使用。",
+        "了解 php-fpm 的工作原理。",
+        "了解 PHPUnit，并在实际项目中使用 PHPUnit 编写过简单的单元测试。",
+        "了解 Redis、Memcached 的使用。"
+      ]
+    },
+    {
+      "title": "Linux",
+      "items": [
+        "了解 Linux 常用命令，能够做简单的运维、代码部署、环境搭建。",
+        "了解 Nginx + PHP 的配置。"
+      ]
+    },
+    {
+      "title": "前端",
+      "items": [
+        "了解前端相关知识，能与前端配合开发。",
+        "简单使用过 vue.js 框架。"
+      ]
+    },
+    {
+      "title": "其它",
+      "items": [
+        "了解计算机网络相关知识，了解 HTTP 协议相关知识，初步了解 TCP/IP 相关知识。",
+        "熟悉 git 相关命令，在实际项目中实践过 git flow。",
+        "了解网络安全方面知识，了解常见的攻击手段，对网络安全有实践。"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Resume（个人项目）",
+      "description": "使用 vue.js 开发的简历模板，还算不丑的界面，可以通过 json 文件生成简历的内容。",
+      "src": "https://github.com/HZFE/daryl_resume",
+      "demo": "https://resume.daryl.moe"
+    },
+    {
+      "name": "array_extend（个人项目）",
+      "description": "在使用 Laravel 的时候，发现了 Collection 中处理数组的一些方便的方法，在使用过程中，我尝试将其通过扩展的方式扩展原生的数组中。",
+      "src": "https://github.com/Daryl-L/array_extend"
+    },
+    {
+      "name": "监控日志收集服务",
+      "description": "主要用于对部门 SDK 服务端以及客户端埋点数据的收集。客户端和服务端将日志数据发送至该服务，然后一部分存入 MySQL 中作为原始数据以备查看，另一部分经过简单的分析后对接到公司的监控服务中。使用 Swoole 开发，与客户端使用 TCP 连接，与服务端使用 Logstash 收集日志并发送到该服务。与监控服务使用 Swoole 自带的异步 HTTP 客户端。"
+    },
+    {
+      "name": "SDK 开发者后台",
+      "description": "为开发者接入 SDK 的配置后台。使用前后端分离的方式开发，我负责部分模块，参与设计 API 的结构。根据公司统一认证的流程，进行一些修改，独自设计了整个登录的流程，以适应前后端分离的结构。对自己负责的模块的代码编写单元测试，尝试推动整个项目的单元测试的编写。"
+    },
+    {
+      "name": "游戏官网及后台",
+      "description": "公司各款游戏的官网，包括登录、注册、文章发布等功能。后经过改造，开发了统一的后台，可以配置多款游戏。前台根据 Laravel 的模板，对数据接口进行封装，前端可以通过调用封装好的接口实现模块化开发，省去繁琐的套页面工作，节省了大量的时间。"
+    },
+    {
+      "name": "SDK 数据报表",
+      "description": "配合本部门开发的sdk使用的数据报表。统计 sdk 中所有的数据，对玩家的访问量、留存等进行统计。统计每日流水、金额，并交由财务进行统计以分配收入。其中还有对数据预警的功能。整个系统使用了前后端分离的设计，我负责后端提供代码，返回的接口尽可能地符合 RESTful 设计。"
+    },
+    {
+      "name": "若干微信活动",
+      "description": "负责开发运营的活动需求，有抽奖活动、预约活动以及兑换活动等。在兑换活动和抽奖活动中使用到了 Redis 来确保奖品数量的正确，并且为抽奖活动编写了模板，做到皮肤、奖品、活动可配置。每次在接到需求之后，都会对需求进行分析，尝试对需求建模。并且在开发过程中，会使用 PHPUnit 写一些简单的单元测试。"
+    }
+  ]
+}
