@@ -5,7 +5,7 @@
   "email": "daryl.moe@outlook.com",
   "qq": "286065910",
   "wechat": "Daryl-L",
-  "job": "PHP 开发工程师",
+  "job": "Go 开发工程师",
   "site": "https://is.daryl.moe",
   "github": "https://github.com/Daryl-L",
   "segmentfault": "http://segmentfault.com/u/daryl",
@@ -30,6 +30,12 @@
         "了解 php-fpm 的工作原理。",
         "了解 PHPUnit，并在实际项目中使用 PHPUnit 编写过简单的单元测试。",
         "了解 Redis、Memcached 的使用。"
+      ]
+    },
+    {
+      "title": "Go",
+      "items": [
+        "了解 Go 的基本语法"
       ]
     },
     {
