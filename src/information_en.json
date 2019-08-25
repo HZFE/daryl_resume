@@ -1,0 +1,75 @@
+{
+  "name": "Hanlei Liang",
+  "phoneNumber": "15958154647",
+  "skype": "sai9375@hotmail.com",
+  "email": "daryl.moe@outlook.com",
+  "qq": "286065910",
+  "wechat": "Daryl-L",
+  "job": "Server Junior (R & D Engineer of Go)",
+  "site": "https://is.daryl.moe",
+  "segmentfault": "http://segmentfault.com/u/daryl",
+  "description": "I am an R & D Engineer loving cartoon and programming. I use Go and PHP, and learn Rust.",
+  "hobby": "Go(Weiqi), tennis, ski and cartoon.",
+  "school": "Hangzhou Dianzi University",
+  "education": "Undergraduate course",
+  "degree": "Bachelor of Science",
+  "major": "Information Security",
+  "guaduation": "June 2016",
+  "experiences": [
+    "Baidu (China) Co., Ltd. (Since Feb. 2018)",
+    "Hangzhou Bianfeng Networking Technology Co., Ltd. (From Jul. 2016 to Feb. 2018)"
+  ],
+  "skills": [
+    {
+      "title": "Programming Languages",
+      "items": [
+        "Familiar with Go and its concurrent.",
+        "Familiar with PHP, and its framework Laravel, and Swoole, understand the principle of php-fpm.",
+        "Understand C programming language."
+      ]
+    },
+    {
+      "title": "Database",
+      "items": [
+        "Familiar with MySQL.",
+        "Familiar with Redis."
+      ]
+    },
+    {
+      "title": "Linux",
+      "items": [
+        "Familiar with some Linux commands, and can carry out some basic operation."
+      ]
+    },
+    {
+      "title": "Others",
+      "items": [
+        "Familiar with git and git flow.",
+        "Understand the computer science.",
+        "Understand computer network, understand HTTP and TCP protocol.",
+        "Understand the web security."
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Notification center.",
+      "description": "It is an ability of the app named Youhua which is one of the products of Baidu Tieba. The ability handles the messages from users, for example, one user comments the other user's thread. In this module, I use the MQ to deliver the messages, and Redis to avoid losing messages."
+    },
+    {
+      "name": "Group module of Youhua app.",
+      "description": "It is one module of Youhua app, and my duty in this module is to contribute the codes."
+    },
+    {
+      "name": "Resume.",
+      "description": "By using Vue, I have built this resume website.",
+      "src": "https://github.com/HZFE/daryl_resume",
+      "demo": "https://resume.daryl.moe"
+    },
+    {
+      "name": "array_extend.",
+      "description": "It is an extension of PHP, which copies some array functions from Laravel.",
+      "src": "https://github.com/Daryl-L/array_extend"
+    }
+  ]
+}
